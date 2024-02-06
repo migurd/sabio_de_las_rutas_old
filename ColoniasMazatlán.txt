@@ -1,0 +1,524 @@
+82000 - Balcones de Loma Linda
+82000 - Centro
+82000 - Loma Linda
+82000 - Los Pinos
+82010 - Campo Bello
+82010 - Estero
+82010 - Independencia
+82010 - Juan Carrasco
+82010 - Libertad
+82010 - Lomas del Mar
+82010 - Palmeiras Club Residencial
+82010 - Palos Prietos
+82013 - Ferrocarrilera
+82014 - San Angel
+82015 - Trópico de Cáncer
+82016 - Brisas del Mar
+82017 - Telleria
+82018 - Insurgentes
+82019 - Tierra y Libertad
+82020 - 12 de Mayo
+82020 - Bahías
+82020 - Klein
+82020 - Nueva Creación
+82028 - Casas Económicas
+82030 - Montuosa
+82030 - Reforma
+82035 - Sanchez Taboada
+82037 - Francisco Solís
+82038 - Obrera
+82040 - Cerro del Vigía
+82040 - Gabriel Leyva
+82040 - Lázaro Cárdenas
+82040 - Playas del Sur
+82043 - Anabella de Gavica
+82043 - Ecológica
+82043 - Isla de la Piedra
+82043 - José de Nazaret
+82043 - Vicente Guerrero
+82047 - Octava Zona Naval (Puerto Mazatlán)
+82050 - Alfredo V. Bonfil
+82050 - Las Malvinas
+82059 - Casa Redonda
+82060 - Francisco I Madero
+82060 - José María Pino Suárez
+82070 - Ejido Rincón de Urías
+82080 - 5ta Chapalita
+82080 - Gral. Rafael Buelna
+82089 - 23 de Noviembre
+82089 - Central Termoélectrica José Aceves Pozos
+82089 - La Sirena
+82089 - Miramar
+82090 - 2a Ampliación Felipe Ángeles
+82090 - 2da. Ampliación Valle de Urias
+82090 - Ampliación Felipe Ángeles
+82090 - Diaz Ordaz
+82090 - Felipe Ángeles
+82090 - Hacienda de Urias
+82090 - Las Flores
+82090 - María del Mar
+82090 - Santa Teresa
+82090 - Urbivilla del Real
+82090 - Valle de Urias
+82099 - Ladrillera
+82099 - María Elena
+82099 - Urías
+82099 - Villa de Guadalupe
+82100 - Las Varas
+82100 - Sábalo Country Club
+82102 - Marina El Cid
+82103 - El Encanto
+82103 - El Secreto
+82103 - Isla Mazatlán
+82103 - Marina Mazatlán
+82103 - Marina Real
+82103 - Palmas del Sol
+82103 - Puerta al Mar
+82103 - Punta Diamante
+82103 - Raíces
+82110 - El Cid
+82110 - El Dorado
+82110 - Ex Laguna Las Gaviotas
+82110 - Las Gaviotas
+82110 - Lomas de Mazatlán
+82110 - Puerta Dorada
+82110 - Quinta Gaviotas
+82110 - Rincón Colonial
+82110 - Zona Dorada
+82112 - Almar
+82112 - Almarena Residencial
+82112 - Altabrisa Residencial
+82112 - Azul Marino
+82112 - Azul Pacific
+82112 - Cerritos Resort
+82112 - Costa Bonita
+82112 - El Palmar
+82112 - Las Palmas
+82112 - Marina del Rey
+82112 - Marina Garden
+82112 - Marina Kelly
+82112 - Palmilla
+82112 - Peninsula
+82112 - Playa Linda
+82112 - Quintas del Mar
+82112 - Real del Mar
+82112 - Royal Country
+82112 - Villa del Mar
+82112 - Villa Marina
+82112 - Villas de Rueda
+82112 - Villa Tranquila
+82113 - Club Real
+82113 - Mediterráneo Club Residencial
+82120 - Azalea
+82120 - El Toreo
+82120 - El Toro
+82120 - Hacienda del Mar
+82120 - Jardines del Toreo
+82120 - Periodista
+82120 - Plaza Reforma
+82120 - Pueblo Nuevo
+82120 - Residencial Rinconada
+82120 - Sanchez Celis
+82120 - Zafiro
+82123 - Alameda
+82123 - El Paraíso
+82123 - Jardines de la Alameda
+82123 - Olimpo INFONAVIT
+82124 - Bluu Habitat Lagoons
+82124 - Chulavista
+82124 - Colinas del Valle
+82124 - Coto Platino
+82124 - El Palmito
+82124 - La Joya
+82124 - Marsella
+82124 - Paseo Alameda
+82124 - Paseo Alameda Dos
+82124 - Paseo de Las Torres
+82124 - Paseo Los Olivos
+82124 - Prados del Sol
+82124 - Predio Rancho Las Habas
+82124 - Puesta del Sol
+82124 - Real del Valle
+82124 - Real Pacífico
+82124 - Rincón de las Palmas
+82124 - Terranova
+82124 - Terranova Plus
+82125 - Quinta Real
+82125 - Rincón de Las Plazas
+82126 - Hacienda Las Cruces
+82127 - Dorados de Villa
+82127 - Ejidal Francisco Villa
+82127 - Francisco Villa
+82127 - Libertad de Expresión
+82128 - Hacienda Los Mangos
+82128 - INFONAVIT Playas
+82128 - Los Mangos I
+82128 - Los Mangos II
+82128 - Privanza
+82128 - San Carlos
+82129 - El Venadillo
+82129 - Hacienda del Seminario
+82129 - Huerta Grande
+82129 - Monte Calvario
+82130 - Mar de Cortes
+82132 - Ampliación Francisco Alarcón (Venadillo II)
+82132 - Arboledas I
+82132 - Arboledas II
+82132 - Delfines
+82132 - Francisco Alarcón Infonavit
+82132 - Jardines del Bosque
+82132 - Los Caracoles
+82132 - Portomolino
+82132 - Roca Condominios
+82132 - Torremolinos
+82132 - Tortugas I
+82132 - Valle Dorado
+82133 - Brisas del Valle II
+82133 - Del Valle
+82133 - Las Brisas
+82133 - Las Misiones
+82133 - Misiones 2000
+82133 - Valle Dorado II
+82134 - Arboledas III
+82134 - Arieta
+82134 - Colosio Si
+82134 - El Conchi II
+82134 - Felicidad
+82134 - Hogar Pescador
+82134 - Jardines de la Riviera
+82134 - Jardines del Valle
+82134 - Jardines Residencial
+82134 - Jesús Osuna
+82134 - La Riviera
+82134 - Los Robles
+82134 - Lucio Valverde
+82134 - Manuel de la Vega
+82134 - Monte Verde
+82134 - Mundialista
+82134 - Nuevo Milenio
+82134 - Prado Bonito
+82134 - Puerta del Sol
+82134 - Renato Vega
+82134 - Romanita de La Peña
+82134 - Salinas de Gortari
+82134 - San Antonio
+82134 - San Francisco
+82134 - San Marcos
+82134 - Santa Rosa
+82134 - Sinaloa
+82134 - Valle del Ejido
+82134 - Villa Carey
+82136 - Bosques del Arroyo
+82136 - Buenos Aires
+82136 - Colinas del Real
+82136 - Jaripillo
+82136 - La Campiña
+82136 - María Antonieta
+82136 - Montebello
+82136 - Petróleos
+82136 - Santa Laura
+82136 - Torremolinos Costa Azul
+82136 - Valle Bonito
+82136 - Villa Tutuli
+82136 - Villa Tutuli II
+82137 - Huertos Familiares
+82138 - FOVISSSTE Playa Azul
+82139 - Ampliación Villa Verde
+82139 - Arboledas INVIES
+82139 - Bugambilias
+82139 - Costa Dorada
+82139 - El Conchi
+82139 - El Conchi Infonavit
+82139 - Francisco Labastida Ochoa
+82139 - Jesús Kumate
+82139 - La Cantera
+82139 - Las Mañanitas
+82139 - Lomas de San Jorge
+82139 - Los Conchis Sección Arrecifes
+82139 - Los Laureles
+82139 - Nuevo Cajeme
+82139 - Pradera Dorada
+82139 - San Joaquín
+82139 - Santa Sofía
+82139 - Villa de las Flores
+82139 - Villa Florida
+82139 - Villa Verde
+82139 - Vista del Mar
+82139 - Viva Progreso
+82140 - Estadio
+82140 - Lomas del Valle
+82140 - López Mateos
+82143 - Casa Blanca
+82144 - Girasoles
+82146 - Antiguo Aeropuerto
+82146 - Sembradores de La Amistad
+82147 - María Fernanda
+82148 - Playas del Sol
+82149 - Flamingos
+82150 - 20 de Noviembre
+82150 - El Castillo
+82150 - Los Ángeles (Santa Fe)
+82150 - Olímpica
+82150 - Villa de Jacaro
+82150 - Villa Galaxia
+82150 - Villa Satélite
+82153 - Antonio Toledo Corro
+82153 - Jabalines Infonavit
+82154 - Corredor de Abasto
+82154 - FOVISSSTE Jabalíes
+82154 - Issstesin
+82154 - Las Torres
+82154 - Lomas del Bosque
+82154 - Los Olivos
+82154 - Los Portales
+82154 - Los Venados
+82154 - Portal de los Olivos
+82154 - Privada Santa Rita
+82154 - San Nicolás
+82155 - Ruben Jaramillo
+82156 - Villas del Estero
+82157 - Bahía de Mazatlán FOVISSSTE
+82157 - Costa Brava
+82157 - Gilberto Lopez
+82157 - Isla Residencial
+82157 - Jacarandas
+82157 - La Cima Residencial
+82157 - Plazas San Ignacio
+82157 - Residencial Flamingos
+82157 - Santa Virginia
+82157 - Villa Bonita
+82158 - Federico Velarde
+82159 - Esperanza Fovissste
+82159 - Los Sauces
+82159 - Universidad 94
+82160 - Luis Echeverría Alvarez
+82163 - Burócrata
+82163 - Fuentes del Valle
+82163 - Las Olas
+82164 - Esmeralda
+82164 - Salvador Allende
+82164 - Villa Residencial del Rey
+82165 - Jabalíes
+82170 - Constitución
+82170 - Morelos
+82170 - Ramon F Iturbide
+82180 - Benito Juárez
+82180 - Esperanza
+82180 - Jesús Garcia
+82180 - Lomas de Juárez
+82180 - Santa Elena
+82180 - Venustiano Carranza
+82183 - Obrera Industrial
+82185 - Loma Atravesada
+82186 - Azteca
+82186 - Santa Cecilia
+82187 - Del Bosque
+82187 - San Rafael
+82188 - Anáhuac
+82190 - Ampliación Esperanza
+82190 - El Campestre
+82190 - Emiliano Zapata
+82190 - Flores Magón
+82190 - Lomas de las Torres
+82190 - Mazatlan I
+82190 - Melina
+82190 - Mirasol
+82190 - Niños Héroes
+82190 - Petrolero
+82195 - Club Campestre Mazatlán
+82195 - El Pescador
+82195 - Hacienda Victoria
+82195 - La Alborada
+82195 - Lomas de Cristo Rey
+82195 - Lomas Del Porvenir
+82195 - Mazatlan II
+82195 - Mazatlán III
+82195 - Palmares
+82195 - Rincón de Mazatlán
+82195 - Universo
+82197 - Primavera
+82198 - Ampliación Lomas del Ébano
+82198 - Doña Chonita
+82198 - Ejidal
+82198 - Ex Hacienda del Conchi
+82198 - Hacienda del Valle
+82198 - La Foresta
+82198 - Loma Bonita
+82198 - Lomas del Ébano
+82198 - Miguel Hidalgo
+82198 - Rinconada Del Valle
+82198 - San Fernando
+82198 - Simon Jimenez Cárdenas
+82198 - Valle del Sol
+82198 - Villas Del Sol
+82199 - Genaro Estrada Calderón
+82199 - Higueras Residencial
+82199 - Los Magueyes
+82199 - Los Tabachines
+82199 - Praderas del Sol
+82200 - Las Mañanitas
+82200 - La Tuna
+82200 - Lomas de Monterrey
+82200 - San Francisquito
+82203 - El Vainillo
+82204 - El Pozole
+82204 - La Urraca Nueva
+82204 - Los Pozos
+82204 - Parque Industrial Mazatlán
+82205 - El Aguaje de Costilla
+82205 - Estación Presidio
+82205 - La Amapa
+82205 - La Amapa
+82205 - La Limonera
+82206 - El Walamo
+82206 - Pedro Rodríguez
+82207 - Campo Rey
+82207 - El Garitón
+82207 - El Habalito del Tubo
+82210 - Villa Unión Centro
+82213 - El Tronconal
+82214 - 7 de Abril
+82214 - Agustina Ramírez
+82214 - Alfonso G. Calderón
+82214 - Buenavista
+82214 - Fidel Velázquez
+82214 - Flor de Mayo
+82214 - Lomas de Villa Unión
+82215 - Ángela Peralta
+82215 - Antonio Toledo Corro
+82215 - José López Portillo
+82215 - Lienzo Charro
+82215 - Renato Vega
+82216 - 11 Ríos
+82216 - Ejidal
+82216 - Los Sauces
+82217 - Julio Arroyo
+82217 - Margarita Maza de Juárez
+82217 - Raul Osuna Burgueño
+82217 - Sixto Osuna
+82230 - Telcoyonqui
+82233 - El Llano
+82233 - El Recodo
+82233 - El Zacate
+82233 - Las Conchas
+82233 - Loma Alta de los Zataráin
+82233 - Los Paisas
+82233 - Pichilingue
+82233 - Porras
+82233 - Tiro
+82233 - Veranos
+82234 - El Zapotal
+82234 - Los Ébanos
+82235 - El Arenal
+82236 - Siqueros
+82238 - Charcos Prietos
+82238 - El Espinal
+82238 - El Guayabo
+82238 - El Salto
+82240 - Campo Pueblo Nuevo
+82240 - Lomas del Guayabo
+82243 - Los Ébanos
+82245 - El Roble
+82246 - El Guayabo
+82247 - Escamillas
+82248 - El Bajío
+82248 - El Tecomate de Siqueros
+82249 - Cofradía (Cofradía de Leyva Solano)
+82264 - De los Niños
+82264 - Stanza Magnolia
+82266 - Barrón
+82267 - Ampliación el Castillo
+82267 - Ampliación el Zapote
+82267 - CERESO Mazatlán
+82267 - El Contento
+82267 - El Zapote
+82267 - La Guanera
+82267 - Los Gavilanes
+82269 - Mazatlán (Gral. Rafael Buelna)
+82270 - El Cañón de Batopilas
+82270 - El Habal
+82270 - El Milagro
+82270 - El Mirabal
+82273 - Armadillo
+82273 - El Chilillo
+82273 - Los Cedros
+82273 - Puerta de Canoas
+82274 - Escondida de Palmillas
+82274 - La Presa
+82274 - Las Higueras del Conchi
+82274 - Miravalles
+82274 - Palmillas
+82274 - San Antonio
+82275 - Ejército de Salvación
+82275 - El Pozole
+82275 - San Juan
+82277 - El Huizachal
+82277 - El Potrero de Carrasco
+82277 - La Curva del Potrero
+82277 - La Yerbabuena
+82277 - San José
+82277 - San José (Chuchupiras)
+82277 - Santa Teresa
+82300 - Las Salvias
+82300 - Los Arrayanes (El Saucito)
+82300 - Los Copales
+82300 - Piedra Blanca
+82303 - El Zapote
+82303 - Guaymas
+82303 - La Chapalota
+82303 - La Embocada
+82304 - El Tecomate de la Noria
+82304 - Guamúchil
+82305 - La Osa
+82305 - Las Guásimas
+82305 - Los Cocos
+82306 - El Magistral
+82306 - El Palmillar (El Palmillar de los Agüeros)
+82306 - El Pinto (El Cerro)
+82306 - Metates
+82310 - Potrerillos
+82310 - San José del Cañón
+82313 - El Bebedero
+82313 - El Olvido
+82313 - Juantillos
+82313 - Las Tatemas de Arriba
+82313 - Puerta de San Marcos
+82313 - San Marcos
+82313 - San Marcos
+82314 - El Placer
+82320 - Chicura de la Noria
+82320 - Las Tinajas
+82320 - Los Cardones de Arriba
+82320 - Los Columpios
+82320 - Los Cuilones
+82329 - La Noria de San Antonio (La Noria)
+82330 - Colima
+82330 - El Chilar
+82330 - Los Añiles
+82330 - Los Zapotes
+82330 - San Pablo
+82330 - San Pedro
+82334 - El Pochote
+82334 - La Palma Sola
+82334 - Las Moras de Alonso
+82334 - Santa Fe
+82335 - La Semana
+82335 - Los Limones
+82350 - El Puente del Quelite
+82350 - El Quelite
+82353 - El Amole del Quelite
+82354 - El Llorón
+82355 - San José
+82360 - El Quemado
+82363 - El Moral
+82365 - El Vainillo
+82365 - La Mora Escarbada
+82365 - Los Cedros
+82366 - Jiménez
+82369 - La Sábila
+82370 - Camacho
+82370 - El Recreo
+82373 - El Verde
+82380 - El Chamizal
+82380 - Los Llanitos
+82384 - Mármol de Salcido (Mármol)
