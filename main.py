@@ -43,13 +43,34 @@ furthest_node = epic.get_furthest_node_from_source_node(source_node)
 
 print(f'El nodo más lejano es {furthest_node.name}')
 
-epic.set_source = furthest_node # Se empieza en el más lejano y se termina en la escuela
-epic.set_target = source_node
+epic.set_source(furthest_node) # Se empieza en el más lejano y se termina en la escuela
+epic.set_target(source_node)
 
+# routes = epic.get_most_optimal_route()
+routes = epic.simulate_optimal_route()
 # routes = [connection.route for node in epic.nodes for connection in node.connections]
-routes = epic.get_most_optimal_route()
 
-# route = nx.shortest_path(G, source=source_node_graph, target=target_node_graph, weight='length') # LSP's fault
-fig, ax = ox.plot_graph_routes(G, routes, route_linewidth=0.1, node_size=3, route_colors='r', bgcolor='w', show=False, close=False)
 
+
+# Create a new figure and axis
+fig, ax = plt.subplots()
+
+for i, route in enumerate(routes):
+    # Plot the graph with the current route
+    ox.plot_graph_route(G, route, ax=ax, route_linewidth=1, node_size=3, route_colors='r', bgcolor='w', show=False, close=False)
+    
+    # Annotate edge distances
+    for u, v, data in G.edges(data=True):
+        if (u, v) in route or (v, u) in route:
+            distance = data['length']
+            ax.annotate(f"{distance:.2f} m", ((u[1] + v[1]) / 2, (u[0] + v[0]) / 2), fontsize=6, ha='center')
+
+    # Annotate node names
+    for node in epic.nodes:
+        ax.annotate(node.name, (node.longitude, node.latitude), fontsize=6, ha='center')
+
+    # Pause for 1 second
+    plt.pause(0.2)
+
+# Display the final plot
 plt.show()

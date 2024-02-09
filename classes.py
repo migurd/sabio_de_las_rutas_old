@@ -1,6 +1,9 @@
+from ast import List
 from collections import deque
 import osmnx as ox
 import networkx as nx
+
+
 
 class Node:
     def __init__(self, name, longitude, latitude):
@@ -12,6 +15,10 @@ class Node:
         self.previous_node = None
         self.connections = []
 
+    def get_route_to_target(self, target_name: str):
+        for connection in self.connections:
+            if connection.target.name == target_name: return connection.route
+
 class Connection:
     def __init__(self, target: Node, distance: float, route):
         self.target = target
@@ -20,6 +27,11 @@ class Connection:
 
     def describe(self):
         print(f'{self.source.name:<50}{self.target.name}')
+
+def get_node_using_name(node_lst: list[Node], name: str):
+    for node in node_lst:
+        if node.name == name:
+            return node
 
 class Graph:
     def __init__(self, G, source = None, target = None):
@@ -72,7 +84,6 @@ class Graph:
     def get_furthest_node_from_source_node(self, source_node: Node):
         max_distance = 0
         furthest_node = None
-        print("hi")
         for connection in source_node.connections:
             if max_distance < connection.distance:
                 max_distance = connection.distance
@@ -80,64 +91,20 @@ class Graph:
 
         return furthest_node
 
-    def get_most_optimal_node_path(self):  # Returns path list
-        # Inicializar variables
-        visitados = set()
-        distancias = {nodo: float('inf') for nodo in self.nodes}
-        distancias[self.source] = 0
-        cola = deque([self.source])
+    def simulate_optimal_route(self):
+        routes = []
+        
+        # routes.append(get_node_using_name(self.nodes, "UPSIN").get_route_to_target("Monumento del Pescador"))
+        routes.append(get_node_using_name(self.nodes, "Monumento del Pescador").get_route_to_target("Punto Valentino's"))
+        routes.append(get_node_using_name(self.nodes, "Punto Valentino's").get_route_to_target("Walmart Ejercito Mexicano"))
+        routes.append(get_node_using_name(self.nodes, "Walmart Ejercito Mexicano").get_route_to_target("Telmex Av. Insurgentes"))
+        routes.append(get_node_using_name(self.nodes, "Telmex Av. Insurgentes").get_route_to_target("Acuario"))
+        routes.append(get_node_using_name(self.nodes, "Acuario").get_route_to_target("Jefaturas de Servicios III Región Militar"))
+        routes.append(get_node_using_name(self.nodes, "Jefaturas de Servicios III Región Militar").get_route_to_target("Panamá Restaurantes y Pastelerias"))
+        routes.append(get_node_using_name(self.nodes, "Panamá Restaurantes y Pastelerias").get_route_to_target("Pesca Azteca"))
+        routes.append(get_node_using_name(self.nodes, "Pesca Azteca").get_route_to_target("UPSIN"))
 
-         # Ensure nodo_actual is initialized
-        nodo_actual = self.source  # Assuming source is a valid Node object
+        return routes
 
-        while cola:
-            # Loop through connections while nodo_actual is not None
-            while nodo_actual:
-                visitados.add(nodo_actual)
-
-                for connection in nodo_actual.connections:
-                    vecino = connection.target
-                    if vecino not in visitados:
-                        distancia_total = distancias[nodo_actual] + connection.distance
-                        if distancia_total < distancias[vecino]:
-                            distancias[vecino] = distancia_total
-                            cola.append(vecino)
-
-            # Update nodo_actual with next node from queue (if available)
-            nodo_actual = cola.popleft() if cola else None
-
-        # Reconstruir el camino
-        camino = []
-        nodo_actual = self.target
-        while nodo_actual != self.source:
-            camino.append(nodo_actual)
-            for connection in nodo_actual.connections:
-                if connection.target == camino[-2]:
-                    camino.append(connection.route)
-                    nodo_actual = connection.target
-                    break
-        camino.append(self.source)
-        camino.reverse()
-
-        return camino
-    
-    def get_most_optimal_route(self):
-        # Búsqueda del camino
-        camino = self.get_most_optimal_node_path()
-        for x in camino:
-            print(x)
-
-        # Convertir a rutas
-        camino_rutas = []
-        for i in range(len(camino) - 1):
-            start_node = camino[i]
-            end_node = camino[i+1]
-            # Find the route connecting the two nodes
-            route = None
-            for connection in start_node.connections:
-                if connection.target == end_node:
-                    route = connection.route
-                    break
-            camino_rutas.append(route)
-
-        return camino_rutas
+    def get_most_optimal_route(self):  # We got humbled
+        pass
