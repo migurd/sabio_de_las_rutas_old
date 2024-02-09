@@ -14,9 +14,9 @@ from helper import get_node_using_name
     # Tiene que cruzar por la mayor cantidad de nodos posibles, si es posible TODOS
 # Poner un límite de costos usando Heurísticas, un tipo de Prompt que limite el presupuesto por viaje
 
-G = ox.graph_from_place('Mazatlán, Sinaloa, México', network_type='drive')
-# address = 'Universidad Politécnica de Sinaloa, Calle Cerro de Guadalupe, Genaro Estrada, Mazatlán, Sinaloa, 82199, Mexico'
-# G = ox.graph_from_address(address, dist=7500, network_type='drive')
+# G = ox.graph_from_place('Mazatlán, Sinaloa, México', network_type='drive')
+address = 'Universidad Politécnica de Sinaloa, Calle Cerro de Guadalupe, Genaro Estrada, Mazatlán, Sinaloa, 82199, Mexico'
+G = ox.graph_from_address(address, dist=7500, network_type='drive')
 # fig, ax = ox.plot_graph(G, show=False, close=False)
 
 # Define the locations as Node objects
@@ -64,9 +64,9 @@ epic = Graph(G, source=get_node_using_name(locations, furthest_location), target
 for location in locations:
     epic.add_node(location)
 
-routes = [connection.route for connection in epic.get_most_optimal_path()]
+routes = [connection.route for connection in epic.connections]
 
 # route = nx.shortest_path(G, source=source_node_graph, target=target_node_graph, weight='length') # LSP's fault
-fig, ax = ox.plot_graph_routes(G, routes, route_linewidth=0.1, node_size=2, route_colors='g', bgcolor='w', show=False, close=False)
+fig, ax = ox.plot_graph_routes(G, routes, route_linewidth=0.1, node_size=3, route_colors='r', bgcolor='w', show=False, close=False)
 
 plt.show()

@@ -1,6 +1,5 @@
 import osmnx as ox
 import networkx as nx
-from helper import get_node_using_name
 
 class Node:
     def __init__(self, name, longitude, latitude):
