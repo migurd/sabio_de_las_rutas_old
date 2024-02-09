@@ -43,10 +43,11 @@ furthest_node = epic.get_furthest_node_from_source_node(source_node)
 
 print(f'El nodo más lejano es {furthest_node.name}')
 
-epic.set_source = source_node
-epic.set_target = furthest_node
+epic.set_source = furthest_node # Se empieza en el más lejano y se termina en la escuela
+epic.set_target = source_node
 
-routes = [connection.route for node in epic.nodes for connection in node.connections]
+# routes = [connection.route for node in epic.nodes for connection in node.connections]
+routes = epic.get_most_optimal_route()
 
 # route = nx.shortest_path(G, source=source_node_graph, target=target_node_graph, weight='length') # LSP's fault
 fig, ax = ox.plot_graph_routes(G, routes, route_linewidth=0.1, node_size=3, route_colors='r', bgcolor='w', show=False, close=False)

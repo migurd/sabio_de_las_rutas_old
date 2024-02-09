@@ -1,3 +1,4 @@
+from collections import deque
 import osmnx as ox
 import networkx as nx
 
@@ -79,26 +80,64 @@ class Graph:
 
         return furthest_node
 
-    def get_most_optimal_path(self):  # Returns path list
-        most_optimal_path = []  # Connections that start from the furthest point and finishes at school
+    def get_most_optimal_node_path(self):  # Returns path list
+        # Inicializar variables
+        visitados = set()
+        distancias = {nodo: float('inf') for nodo in self.nodes}
+        distancias[self.source] = 0
+        cola = deque([self.source])
 
-        # Búsqueda de Anchura
-        # It has two rules tho
-        # 1. It has to cover all the nodes
-        # 2. The last node is UPSIN and first one is source
-        
-        # Se inicializan las distancias
-        self.source.lowest_value = 0
-        total_distance = 0
+         # Ensure nodo_actual is initialized
+        nodo_actual = self.source  # Assuming source is a valid Node object
 
-        # 
-        
-        
-        return most_optimal_path
+        while cola:
+            # Loop through connections while nodo_actual is not None
+            while nodo_actual:
+                visitados.add(nodo_actual)
 
+                for connection in nodo_actual.connections:
+                    vecino = connection.target
+                    if vecino not in visitados:
+                        distancia_total = distancias[nodo_actual] + connection.distance
+                        if distancia_total < distancias[vecino]:
+                            distancias[vecino] = distancia_total
+                            cola.append(vecino)
 
+            # Update nodo_actual with next node from queue (if available)
+            nodo_actual = cola.popleft() if cola else None
 
+        # Reconstruir el camino
+        camino = []
+        nodo_actual = self.target
+        while nodo_actual != self.source:
+            camino.append(nodo_actual)
+            for connection in nodo_actual.connections:
+                if connection.target == camino[-2]:
+                    camino.append(connection.route)
+                    nodo_actual = connection.target
+                    break
+        camino.append(self.source)
+        camino.reverse()
 
+        return camino
+    
+    def get_most_optimal_route(self):
+        # Búsqueda del camino
+        camino = self.get_most_optimal_node_path()
+        for x in camino:
+            print(x)
 
+        # Convertir a rutas
+        camino_rutas = []
+        for i in range(len(camino) - 1):
+            start_node = camino[i]
+            end_node = camino[i+1]
+            # Find the route connecting the two nodes
+            route = None
+            for connection in start_node.connections:
+                if connection.target == end_node:
+                    route = connection.route
+                    break
+            camino_rutas.append(route)
 
-
+        return camino_rutas
