@@ -12,8 +12,7 @@ class Node:
         self.connections = []
 
 class Connection:
-    def __init__(self, source: Node, target: Node, distance: float, route):
-        self.source = source
+    def __init__(self, target: Node, distance: float, route):
         self.target = target
         self.distance = distance
         self.route = route
@@ -22,15 +21,18 @@ class Connection:
         print(f'{self.source.name:<50}{self.target.name}')
 
 class Graph:
-    def __init__(self, G, source, target):
+    def __init__(self, G, source = None, target = None):
         self.G = G
         self.source = source
         self.target = target
 
         self.nodes = []
-        self.connections = []
-        self.add_node(source)
-        self.add_node(target)
+
+    def set_source(self, source: Node):
+        self.source = source
+
+    def set_target(self, target: Node):
+        self.target = target
 
     def add_node(self, new_node: Node):
         if new_node in self.nodes:  # Node is NOT added to the list IF node is already listed
@@ -49,8 +51,11 @@ class Graph:
         distance = self.get_connection_distance(source_node_graph, target_node_graph)  # Real distance is gotten
         route = self.get_shortest_route(source_node_graph, target_node_graph)
 
-        new_connection = Connection(source, target, distance, route)  # Heuristic connection using Distance is created
-        self.connections.append(new_connection)
+        new_connection_from_source_to_target = Connection(target, distance, route)  # Heuristic connection using Distance is created
+        new_connection_from_target_to_source = Connection(source, distance, route)
+
+        source.connections.append(new_connection_from_source_to_target)  # Se añaden conexiones a los nodos
+        target.connections.append(new_connection_from_target_to_source)
         # print(f'{source.name} está alejado de {target.name} por un total de {distance}m')
 
     def get_connection_distance(self, source, target):
@@ -63,10 +68,21 @@ class Graph:
     def get_nearest_node(self, node: Node):
         return ox.nearest_nodes(self.G, node.longitude, node.latitude)
     
+    def get_furthest_node_from_source_node(self, source_node: Node):
+        max_distance = 0
+        furthest_node = None
+        print("hi")
+        for connection in source_node.connections:
+            if max_distance < connection.distance:
+                max_distance = connection.distance
+                furthest_node = connection.target
+
+        return furthest_node
+
     def get_most_optimal_path(self):  # Returns path list
         most_optimal_path = []  # Connections that start from the furthest point and finishes at school
 
-        # Apply dijkstra algorithm
+        # Búsqueda de Anchura
         # It has two rules tho
         # 1. It has to cover all the nodes
         # 2. The last node is UPSIN and first one is source
@@ -80,21 +96,6 @@ class Graph:
         
         return most_optimal_path
 
-    def get_connection(self, source_name: str, target_name: str):  # Doesn't matter the order of the conns, we get it back regardless the order
-        for connection in self.connections:
-            if source_name == connection.source.name and target_name == connection.target.name:
-                return connection
-            if target_name == connection.source.name and source_name == connection.target.name:
-                return connection
-
-    def get_connections(self, node_name: str):
-        connections = []
-
-        for connection in self.connections:
-            if node_name == connection.source.name or node_name == connection.target.name:
-                connections.append(connection)
-
-        return connections
 
 
 

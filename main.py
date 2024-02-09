@@ -32,39 +32,21 @@ locations = [
     Node("Telmex Av. Insurgentes", -106.41678831852965, 23.235330866471884)
 ]
 
-# Get UPSIN node
-upsin_coords = (-106.37420308842162, 23.265557831781045)
-upsin_node = ox.nearest_nodes(G, upsin_coords[0], upsin_coords[1])
-
-# SE CALCULA LA DISTANCIA MÁS LEJANA
-furthest_location = ''
-furthest_distance = float('-inf')
-
-for location in locations:
-    if location.name != "UPSIN":
-        target_node = ox.nearest_nodes(G, location.longitude, location.latitude)
-        distance = round(nx.shortest_path_length(G, source=upsin_node, target=target_node, weight='length'), 2)
-        if distance > furthest_distance:
-            furthest_distance = distance
-            furthest_location = location.name
-
-print("Furthest location from UPSIN:", furthest_location)
-print("Distance from UPSIN:", furthest_distance, "meters")
-
-# Get nodes corresponding to the specified coordinates
-source_node = get_node_using_name(locations, "UPSIN")
-target_node = get_node_using_name(locations, furthest_location)
-
-# Convert coordinates to nodes
-source_node_graph = ox.nearest_nodes(G, source_node.longitude, source_node.latitude)
-target_node_graph = ox.nearest_nodes(G, target_node.longitude, target_node.latitude)
-
 # BÚSQUEDA 
-epic = Graph(G, source=get_node_using_name(locations, furthest_location), target=get_node_using_name(locations, "UPSIN"))
+epic = Graph(G)
+
 for location in locations:
     epic.add_node(location)
 
-routes = [connection.route for connection in epic.connections]
+source_node = get_node_using_name(locations, "UPSIN")
+furthest_node = epic.get_furthest_node_from_source_node(source_node)
+
+print(f'El nodo más lejano es {furthest_node.name}')
+
+epic.set_source = source_node
+epic.set_target = furthest_node
+
+routes = [connection.route for node in epic.nodes for connection in node.connections]
 
 # route = nx.shortest_path(G, source=source_node_graph, target=target_node_graph, weight='length') # LSP's fault
 fig, ax = ox.plot_graph_routes(G, routes, route_linewidth=0.1, node_size=3, route_colors='r', bgcolor='w', show=False, close=False)
