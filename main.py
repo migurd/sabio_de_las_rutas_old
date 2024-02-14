@@ -40,23 +40,103 @@ for location in locations:
 source_node = get_node_using_name(locations, "UPSIN")
 furthest_node = epic.get_furthest_node_from_source_node(source_node)
 
-print(f'El nodo más lejano es {furthest_node.name}')
+# print(f'El nodo más lejano es {furthest_node.name}')
 
 epic.set_source(furthest_node) # Se empieza en el más lejano y se termina en la escuela
 epic.set_target(source_node)
 
+initial_route = get_node_using_name(locations, source_node.name).get_route_to_target(furthest_node.name)
+
 # routes = epic.get_most_optimal_route()
 # most_optimal_node_list = epic.simulate_optimal_route()
 most_optimal_node_list = epic.get_most_optimal_node_list()
-print(epic.get_distance_from_node_list(most_optimal_node_list))
+
+meters_to_km = lambda meters: meters / 1000
+
+distance_meters = epic.get_distance_from_node_list(most_optimal_node_list)
+distance_km = round(meters_to_km(distance_meters), 2)
+
+distance_source_to_target_meters = get_node_using_name(locations, source_node.name).get_distance_to_target(furthest_node.name)
+distance_source_to_target_km = round(meters_to_km(distance_source_to_target_meters), 2)
+
 routes = epic.get_routes_from_node_list(most_optimal_node_list)
 # routes = [connection.route for node in epic.nodes for connection in node.connections]
 
-# Create a new figure and axis
-fig, ax = plt.subplots()
+###
+### STYLES
+###
 
-for i, route in enumerate(routes):
-    # Plot the graph with the current route
+# Create a new figure with a fixed size
+fig, ax = plt.subplots(figsize=(12, 12))  # Adjust the size as needed
+
+# Annotate node names
+for node in [source_node, furthest_node]:
+    ax.annotate(node.name, (node.longitude, node.latitude), fontsize=6, ha='center')
+
+# Load and plot the logo image
+logo = plt.imread('src/logo.png')  # Replace 'src/logo.png' with the path to your logo image
+logo_ax = fig.add_axes([0.8, 0.8, 0.2, 0.2])  # Adjust position and size as needed
+logo_ax.imshow(logo)
+logo_ax.axis('off')
+
+# Add a title
+ax.set_title(f'El punto más lejano de {source_node.name}', fontsize=16, fontweight='bold')
+
+# Set a window title
+fig.canvas.manager.set_window_title('El Sabio de las Rutas - SHITSU')
+
+# Set dimensions to maximized
+manager = plt.get_current_fig_manager()
+manager.window.state('zoomed')  # Maximize the window
+
+# Add informative text to the right of the plot
+info_text = 'Lista a seguir:\n\n'
+for node in most_optimal_node_list:
+    info_text += f'  *   {node.name}\n\n'
+
+plt.figtext(0.775, 0.5, info_text, fontsize=10, verticalalignment='center', horizontalalignment='left')
+
+# Add informative text to the left of the plot
+left_text = f"""
+Nodo inicial:
+ * {source_node.name}
+
+Nodo más lejano:
+ * {furthest_node.name}
+
+Distancia {source_node.name} a punto más lejano:
+ * {distance_source_to_target_km}km
+
+Distancia punto más lejano a UPSIN:
+ * {distance_km}km
+
+Distancia completa:
+ * {distance_source_to_target_km + distance_km}km
+"""
+
+plt.figtext(0.075, 0.5, left_text, fontsize=10, verticalalignment='center', horizontalalignment='left')
+
+# Customize plot to resemble a map
+ax.set_aspect('equal')
+ax.set_facecolor('w')  # Set background color to white
+ax.tick_params(left=False, bottom=False)  # Remove ticks
+
+# Plot the initial route (green)
+ox.plot_graph_route(G, initial_route, ax=ax, route_linewidth=1, node_size=3, route_colors='g', bgcolor='w', show=False, close=False)
+plt.waitforbuttonpress()
+
+# Plot subsequent routes with different colors (red)
+ax.clear()
+
+# Add a title
+ax.set_title(f"La Mejor Ruta Hamiltoniana de {source_node.name} al punto más lejano", fontsize=16, fontweight='bold')
+
+# Annotate node names
+for node in epic.nodes:
+    ax.annotate(node.name, (node.longitude, node.latitude), fontsize=6, ha='center')
+
+# Routes are added
+for route in routes:
     ox.plot_graph_route(G, route, ax=ax, route_linewidth=1, node_size=3, route_colors='r', bgcolor='w', show=False, close=False)
     
     # Annotate edge distances
@@ -64,13 +144,6 @@ for i, route in enumerate(routes):
         if (u, v) in route or (v, u) in route:
             distance = data['length']
             ax.annotate(f"{distance:.2f} m", ((u[1] + v[1]) / 2, (u[0] + v[0]) / 2), fontsize=6, ha='center')
-
-    # Annotate node names
-    for node in epic.nodes:
-        ax.annotate(node.name, (node.longitude, node.latitude), fontsize=6, ha='center')
-
-    # Pause for 1 second
-    plt.pause(0.2)
 
 # Display the final plot
 plt.show()
