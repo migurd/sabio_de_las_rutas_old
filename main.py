@@ -46,13 +46,11 @@ epic.set_source(furthest_node) # Se empieza en el más lejano y se termina en la
 epic.set_target(source_node)
 
 # routes = epic.get_most_optimal_route()
-most_optimal_node_list = epic.simulate_optimal_route()
-# most_optimal_node_list = epic.get_most_optimal_node_list()
+# most_optimal_node_list = epic.simulate_optimal_route()
+most_optimal_node_list = epic.get_most_optimal_node_list()
 print(epic.get_distance_from_node_list(most_optimal_node_list))
 routes = epic.get_routes_from_node_list(most_optimal_node_list)
 # routes = [connection.route for node in epic.nodes for connection in node.connections]
-
-
 
 # Create a new figure and axis
 fig, ax = plt.subplots()

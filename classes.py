@@ -125,7 +125,7 @@ class Graph:
             
             if flag:
                 # If list isn't full, we keep going
-                visited_copy = visited[:]
+                visited_copy = visited.copy()
                 visited_copy.append(connection.target)
                 current_distance += connection.distance
                 # print(f'From {visited[-2].name} to {connection.target.name} theres {connection.distance}m')
